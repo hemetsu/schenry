@@ -1,0 +1,38 @@
+.main-container {
+    padding-top: 136px;
+}
+
+section {
+    text-align: center;
+
+    img {
+        max-width: $container-width;
+        width: 100%;
+    }
+
+    .desc {
+        padding: 5em 0 7em;
+    }
+
+    h2 {
+        margin: 0 auto 1.5em;
+    }
+
+    p {
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 0 2em;
+        line-height: 1.5em;
+    }
+}
+
+@media only screen and (max-width: $mobile-width) {
+    .main-container {
+        padding-top: 78px;
+    }
+    section {
+        .desc {
+            padding: 3em 0 5em;
+        }
+    }
+}

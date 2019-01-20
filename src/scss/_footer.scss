@@ -1,0 +1,115 @@
+.main-footer {
+    text-align: center;
+    background-color: #333;
+    padding: 4em 0 0;
+    color: #fff;
+
+    .inner {
+        
+    }
+
+    h2 {
+        margin: 0 auto 2em;
+    }
+
+    ul {
+        li {
+            display: inline;
+            padding: 0 1em 0 0.75em;
+            border-right: 1px solid $border-color;
+
+            &:last-child { border-right: 0; }
+
+            a {
+                color: #fff;
+                &:hover, &:focus, &:active {
+                    color: $hover-color;
+                }
+            }
+        }
+    }
+
+    .social {
+        a {
+            margin-right: 1em;
+            font-size: 1.1em;
+        }
+    }
+
+    form {
+        padding: 3.5em 0;
+        input {
+            width: 240px;
+            border: 0;
+            padding: 0.75em 1em;
+            font-size: 14px;
+            margin-right: 0.25em;
+            color: $font-color;
+        }
+        input::placeholder {
+            color: #ccc;
+        }
+
+        button {
+            border: 0;
+            border-radius: 2px;
+            background-color: $secondary-color;
+            text-transform: uppercase;
+            padding: 1em;
+            font-size: 12px;
+            vertical-align: top;
+            transition: all 200ms ease-in-out;
+
+            &:hover, &:focus, &:active {
+                background-color: $hover-color;
+            }
+        }
+    }
+
+    small {
+        display: block;
+        font-size: 14px;
+        color: #ccc;
+        padding: 4em 2em;
+        border-top: 1px solid $border-color;
+        max-width: $container-width;
+        margin: 0 auto;
+    }
+}
+
+
+@media only screen and (max-width: $mobile-width) {
+    .main-footer {
+        padding: 3em 2em;
+        ul {
+            li {
+                display: block;
+                margin-bottom: 0.5em;
+                border-right: 0;
+            }
+        }
+
+        .social {
+            padding: 1em 0;
+            a { margin: 0 0.5em; }
+        }
+
+        form {
+            padding: 0.5em 0 3em;
+            input {
+                margin-right: 0;
+                margin-bottom: 1em;
+                width: 100%;
+                padding: 1em;
+            }
+            button {
+                width: 100%;
+                padding: 1.25em 1em;
+            }
+        }
+
+        small {
+            padding: 3em 2em 0em;
+        }
+    }
+}
