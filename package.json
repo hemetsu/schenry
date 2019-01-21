@@ -5,6 +5,7 @@
   "main": "Gruntfile.js",
   "scripts": {
     "start": "grunt",
+    "image": "grunt image",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "David Huang",
@@ -19,6 +20,7 @@
     "grunt-contrib-imagemin": "^3.1.0",
     "grunt-contrib-uglify": "^4.0.0",
     "grunt-contrib-watch": "^1.1.0",
+    "grunt-jimp": "0.0.5",
     "grunt-sass": "^3.0.2",
     "node-sass": "^4.11.0"
   }

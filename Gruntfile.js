@@ -76,6 +76,24 @@ module.exports = function(grunt) {
                 }]
             }
 		},
+
+		jimp: {
+			placeholders: {
+				options: {
+					suffix: 'placeholder',
+					actions: {
+						blur: 30,
+						quality: 20,
+					}
+				},
+				files: [{
+					expand: true,
+					cwd: 'src/img',
+					src: ['*.{jpg,jpeg,png}'],
+					dest: 'img/'
+				}]
+			},
+		},
 		
 		connect: {
 			server: {
@@ -89,7 +107,7 @@ module.exports = function(grunt) {
 
 	// Tasks
 	grunt.registerTask('default', ['concat', 'uglify', 'sass:dist', 'autoprefixer', 'connect:server', 'watch']);
-	grunt.registerTask('imagemin', ['imagemin']);
+	grunt.registerTask('image', ['imagemin', 'jimp']);
 
 	// Register tasks
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -98,5 +116,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-jimp');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 };

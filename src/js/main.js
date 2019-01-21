@@ -1,4 +1,6 @@
 $(function() {
+
+    var layzr = new Layzr();
     
     $('#cta-menu').on('click', function() {
         $(this).toggleClass('is-active');

@@ -30,4 +30,11 @@ ul {
 
 .outdated {
     text-align: center;
+    position: relative;
+    z-index: 9999;
+}
+
+.inverted {
+    color: #fff;
+    a { color: #fff; }
 }
