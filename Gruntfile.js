@@ -33,11 +33,6 @@ module.exports = function(grunt) {
 					'js/main.min.js': ['js/main.js']
 				},
 			},
-			vendor: {
-				files: {
-					'js/vendor.min.js': ['js/vendor.js']
-				},
-			},
         },
         
 		sass: {
@@ -77,8 +72,8 @@ module.exports = function(grunt) {
 				options: {
 					suffix: 'placeholder',
 					actions: {
-						blur: 50,
-						quality: 20,
+						blur: 10,
+						quality: 40,
 					}
 				},
 				files: [{
