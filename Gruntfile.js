@@ -23,12 +23,7 @@ module.exports = function(grunt) {
         concat: {
 			main: {
 				files: {
-					'js/main.js': ['src/js/*.js'],
-				},
-			},
-			vendor: {
-				files: {
-					'js/vendor.js': ['src/js/vendor/*.js'],
+					'js/main.js': ['src/js/vendor/*.js', 'src/js/*.js'],
 				},
 			},
 		},
@@ -71,7 +66,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'src/img',
-                    src: ['**/*.{png,jpg,gif}'],
+                    src: ['**/*.{png,jpg,gif,svg}'],
                     dest: 'img/'
                 }]
             }
@@ -82,7 +77,7 @@ module.exports = function(grunt) {
 				options: {
 					suffix: 'placeholder',
 					actions: {
-						blur: 30,
+						blur: 50,
 						quality: 20,
 					}
 				},
